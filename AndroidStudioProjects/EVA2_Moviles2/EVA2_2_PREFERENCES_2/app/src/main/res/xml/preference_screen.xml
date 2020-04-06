@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:defaultValue="Default value"
+        android:key="TEXTO"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Edit text preference" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="CHECK"
+        android:title="Check box preference" />
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="SWITCH"
+        android:title="Switch preference" />
+
+    <Preference android:fragment="com.example.eva2_2_preferences_2.extraFragment" android:title="Mas opciones"></Preference>
+
+</PreferenceScreen>
