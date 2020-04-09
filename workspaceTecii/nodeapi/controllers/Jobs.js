@@ -70,8 +70,7 @@ function updateJob(req,res){
     let jobid = req.body.jobid
     let update = req.body.job
 
-    JobsSub.findByIdAndUpdate({_id: jobid}, update, (err,concept)
-    =>{
+    JobsSub.findByIdAndUpdate({_id: jobid}, update, (err,concept)=>{
         if(err) return res.status(500).send({message: `Error in the request ${err}`})
 
         res.status(201).send({message: 'Job is updated', job: concept})

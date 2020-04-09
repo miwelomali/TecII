@@ -9,14 +9,14 @@ module.exports = {
 
 let User = require('../models/User')
 const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt.js')
+const bcrypt = require('bcryptjs')
 const sha256 = require('sha256')
 
 function logInUser(req,res){
     const email = req.body.email
     const pass = req.body.password
     let passwordIsValid = false
-    User.findOne({email: email}).then((user)=> {
+    User.findOne({'profile.email': email}).then((user)=> {
         if(!user) return res.status(404).send('no user found')
 
         //let passwordIsValid = bcrypt.compareSync(

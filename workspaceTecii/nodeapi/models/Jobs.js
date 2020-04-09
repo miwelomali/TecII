@@ -1,11 +1,8 @@
 const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
-const WorkerSchema = mongoose.Schema
-const EmployerSchema = mongoose.Schema
-const PointSchema = mongoose.Schema
 const PointSchema = Schema({
-    lat: NUmber,
+    lat: Number,
     lng: Number,
 })
 
